@@ -75,7 +75,7 @@ const Header: React.FC<HeaderProps> = ({ scrollY, setCursorVariant }) => {
             className="absolute -top-20 left-0"
           >
             <img 
-              src="../../public/models/logo.png" 
+              src="https://elevate-edge2.vercel.app/models/logo.png" 
               alt="Elevate Edge" 
               className="h-40 w-40 rounded-full object-cover object-center"
             />
