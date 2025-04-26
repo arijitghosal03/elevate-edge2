@@ -12,7 +12,7 @@ import ServicesPage from './pages/ServicesPage';
 import CaseStudiesPage from './pages/CaseStudiesPage';
 import CaseStudyDetailPage from './pages/CaseStudyDetailPage';
 import ContactPage from './pages/ContactPage';
-
+import Preloader from './components/navigation/Preloader';
 // Components
 import CustomCursor from './components/ui/CustomCursor';
 
@@ -35,6 +35,7 @@ function App() {
 
   return (
     <>
+    <Preloader/>
       <CustomCursor position={cursorPosition} variant={cursorVariant} />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>

@@ -43,7 +43,6 @@ const HomePage = () => {
       title: "Digital Strategy",
       description: "We craft data-driven strategies tailored to your business goals and target audience."
     },
-   
     {
       icon: <Target size={36} className="text-red-600" />,
       title: "Content Writing",
@@ -278,7 +277,14 @@ const HomePage = () => {
                 viewport={{ once: true }}
                 className="relative h-full min-h-[300px] hidden lg:block"
               >
-                
+                <div className="relative w-96 h-96 mx-auto">
+                  <div className="absolute inset-0 rounded-full border-2 border-white/20"></div>
+                  <img
+                    src="../../public/models/avatar.png"
+                    alt="Creative Avatar"
+                    className="w-full h-full object-cover rounded-full"
+                  />
+                </div>
               </motion.div>
             </div>
           </div>

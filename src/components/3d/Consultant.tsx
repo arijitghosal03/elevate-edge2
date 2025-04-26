@@ -5,7 +5,7 @@ import * as THREE from 'three';
 
 const Consultant = ({ scrollProgress }) => {
   const group = useRef();
-  const { scene } = useGLTF('/models/consultant.glb');
+  const { scene } = useGLTF(');
 
   // Camera positions for different sections
   const cameraPositions = [
