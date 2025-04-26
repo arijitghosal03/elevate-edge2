@@ -138,15 +138,14 @@ const HomePage = () => {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="flex flex-col sm:flex-row gap-4"
               >
-                <Link to="/contact" className="btn btn-primary btn-lg">
+                <Link to="/contact" className="btn btn-primary btn-lg" style={{ marginTop: '-20px', height: '58px' }}>
                   Get Started
                   <ArrowRight size={20} className="ml-2" />
                 </Link>
                 
                 <button 
                   onClick={scrollToServices}
-                  className="btn btn-secondary btn-lg"
-                >
+                  className="btn btn-secondary btn-lg" style={{ marginTop: '-20px', height: '58px' }}>
                   Explore Our Services
                   <ArrowDownRight size={20} className="ml-2" />
                 </button>
