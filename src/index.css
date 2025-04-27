@@ -16,29 +16,31 @@
   }
 
   h1 {
-    @apply text-5xl md:text-7xl lg:text-8xl;
+    @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl;
   }
 
   h2 {
-    @apply text-4xl md:text-5xl lg:text-6xl;
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl;
   }
 
   h3 {
-    @apply text-3xl md:text-4xl;
+    @apply text-2xl sm:text-3xl md:text-4xl;
   }
 
   h4 {
-    @apply text-2xl md:text-3xl;
+    @apply text-xl sm:text-2xl md:text-3xl;
   }
 
   p {
-    @apply text-lg leading-relaxed text-neutral-700;
+    @apply text-base sm:text-lg leading-relaxed text-neutral-700;
   }
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium transition-all duration-300 rounded-lg;
+    @apply inline-flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-medium transition-all duration-300 rounded-lg;
   }
   
   .btn-primary {
@@ -50,7 +52,7 @@
   }
 
   .btn-lg {
-    @apply px-8 py-4 text-lg;
+    @apply px-5 sm:px-6 md:px-8 py-3 md:py-4 text-base md:text-lg;
   }
 
   .container-custom {
@@ -58,7 +60,7 @@
   }
   
   .section {
-    @apply py-16 md:py-24 lg:py-32;
+    @apply py-12 sm:py-16 md:py-24 lg:py-32;
   }
 
   .custom-cursor {
@@ -66,9 +68,8 @@
   }
 
   .handwritten {
-     font-family: 'Pacifico', cursive;
+    font-family: 'Pacifico', cursive;
     font-weight: 700;
-    /* your existing styles */
   }
 }
 
@@ -168,4 +169,46 @@
 .video-background {
   @apply absolute inset-0 w-full h-full object-cover;
   filter: brightness(0.6) contrast(1.2);
+}
+
+/* Hero section specific responsive adjustments */
+section.min-h-screen {
+  @apply flex items-center justify-start;
+  min-height: 100vh;
+}
+
+section.min-h-screen .container-custom {
+  @apply w-full px-4 sm:px-6 md:px-8;
+}
+
+section.min-h-screen video {
+  @apply object-cover;
+  object-position: center;
+}
+
+/* Button adjustments for mobile */
+.btn-lg {
+  height: auto !important;
+  margin-top: 0 !important;
+}
+
+/* Fix for button container on small screens */
+.flex.flex-col.sm\:flex-row.gap-4 {
+  @apply w-full sm:w-auto;
+}
+
+/* Adjust padding for hero content */
+section.min-h-screen .max-w-3xl {
+  @apply px-4 sm:px-0 pt-16 sm:pt-20 md:pt-0;
+}
+
+/* Media query for very small screens */
+@media (max-width: 360px) {
+  h1 {
+    @apply text-3xl;
+  }
+  
+  .btn-lg {
+    @apply px-4 py-2 text-sm;
+  }
 }
